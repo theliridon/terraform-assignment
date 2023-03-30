@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = "terrform-assignment-liridon-bucket"
+  bucket = "terrform-assignment-liridon-bucket-${var.Environment}"
   acl    = "private"
 
   tags = {
-    Environment = "dev"
+    Environment = var.Environment
   }
 }
